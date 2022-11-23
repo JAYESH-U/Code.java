@@ -1,5 +1,4 @@
 package LabPrograms;
-import java.text.Format;
 import java.util.Scanner;
 
 class TW2_TriangleArea{
@@ -27,5 +26,6 @@ class TW2_TriangleArea{
         else{
             System.out.println("This is not a triangle...!!!");
         }
+        sc.close();
     }
 }
