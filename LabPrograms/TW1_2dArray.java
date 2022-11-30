@@ -2,8 +2,8 @@ package LabPrograms;
 
 import java.util.Scanner;
 
-public class TW1_2dArray{
-    public static void main(String[] args){
+public class TW1_2dArray {
+    public static void main(String[] args) {
         int ns;
         Scanner sc = new Scanner(System.in);
         System.out.print("enter the number of students : ");
@@ -12,7 +12,7 @@ public class TW1_2dArray{
         int[] tm = new int[ns];
         float[] avg = new float[5];
         for (int i = 0; i < ns; i++) {
-            System.out.print("Student "+(i+1)+" : ");
+            System.out.print("Student " + (i + 1) + " : ");
             for (int j = 0; j < 3; j++) {
                 m[i][j] = sc.nextInt();
                 tm[i] += m[i][j];
