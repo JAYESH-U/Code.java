@@ -10,7 +10,7 @@ public class TW1_2dArray {
         ns = sc.nextInt();
         int[][] m = new int[ns][3];
         int[] tm = new int[ns];
-        float[] avg = new float[5];
+        float[] avg = new float[ns]; 
         for (int i = 0; i < ns; i++) {
             System.out.print("Student " + (i + 1) + " : ");
             for (int j = 0; j < 3; j++) {
@@ -21,8 +21,7 @@ public class TW1_2dArray {
         }
         System.out.println();
         for (int i = 0; i < ns; i++) {
-            System.out.println(
-                    "Total marks of student " + (i + 1) + " : " + " and the average of the best two is : " + avg[i]);
+            System.out.println("Total marks of student " + (i + 1) + " : "+ tm[i] + " and the average of the best two is : " + avg[i]);
         }
         sc.close();
     }
