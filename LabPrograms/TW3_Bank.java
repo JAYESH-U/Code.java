@@ -1,21 +1,3 @@
-/*
- * A certain small bank intends to automate few of it's banking operations for it's banking operations for it's customers.
- * Design a class by the name bank account to store the customer data having following details:
- * accountNumber
- * accountType
- * Name
- * Address
- * AccountBalance
- * The class must have both default and parameterised constructors. Write appropriate method to compute interest accured 
-   on accountBalance based on the accountType and time in years.
- * Assume 5% for RD account and 7.65 for FD account.
- * Further, add two methods withdrawAmount/depositAmount with amount as input to withdraw and deposit respectively.
- * The withdrawAmount must report in-sufficient balance if accountBalance falls below Rs. 1000.
- * 
- * Task1: Buid the class with appropriate member variables, constuctors and methods.
- * Task2: Instantiate
- */
-
 package LabPrograms;
 import java.util.Scanner;
 
