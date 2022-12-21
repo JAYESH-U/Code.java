@@ -1,4 +1,4 @@
-package LabPrograms;
+  package LabPrograms;
 import java.util.Scanner;
 import java.lang.System;
 
