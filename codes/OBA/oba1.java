@@ -30,6 +30,10 @@ class selectionSort {
 
 public class oba1 {
     public static void main(String[] args) {
+
+        //initialize the start time.
+        final long startTime = System.nanoTime();
+        
         selectionSort s = new selectionSort();
 
         int[] a = { 5, 4, 3, 2, 1 };
@@ -41,5 +45,11 @@ public class oba1 {
 
         System.out.print("After sorting : ");
         s.display(a);
+
+        //calculate the time taken to execute the code.
+        final long duration = System.nanoTime() - startTime;
+        double finalTime = (float) duration / 1000000000;
+
+        System.out.println("Time taken : " + finalTime + " seconds.");
     }
 }
