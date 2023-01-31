@@ -35,7 +35,7 @@ class stack {
     }
 
     void isEmpty() {
-        if(top<0)
+        if (top < 0)
             System.out.println("Stack underflow.");
         else
             System.out.println("Stack is not empty.");
