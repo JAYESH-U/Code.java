@@ -44,5 +44,6 @@ public class oba4 {
         q.dequeue();
         q.enqueue(20);
         q.display();
+        s.close();
     }
 }
