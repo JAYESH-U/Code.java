@@ -53,6 +53,7 @@ class License {
         validLLR = in.next().charAt(0);
         System.out.print("How many number of cases in past one year? : ");
         no_of_cases = in.nextInt();
+        in.close();
     }
 
 }
