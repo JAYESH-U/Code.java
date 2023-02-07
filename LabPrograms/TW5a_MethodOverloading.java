@@ -79,7 +79,7 @@ class stack {
 
 }
 
-public class TW5_MethodOverloading {
+public class TW5a_MethodOverloading {
     public static void main(String[] args) {
         stack s1 = new stack();
         s1.initStack(5);
