@@ -30,7 +30,7 @@ class FTEmployee extends Employee {
     }
 
     void calSal() {
-        sal = (basSal + (basSal * 075) + (basSal * 0.075) - (basSal * 0.1));
+        sal = (basSal + (basSal * 0.75) + (basSal * 0.075) - (basSal * 0.1));
     }
 }
 
@@ -77,17 +77,17 @@ class PTEmployee extends Employee {
 
 public class TW4_employee {
     public static void main(String[] args) {
-        FTEmployee f1 = new FTEmployee("Arun", 25, "Vijaypur", "Male", 10000);
+        FTEmployee f1 = new FTEmployee("Aryan", 25, "Vijaypur", "Male", 10000);
         f1.calSal();
         System.out.println("Details of Full time employee : ");
         f1.show();
-        PTEmployee e1 = new PTEmployee("Rohit", 30, "Belgaum", "Male", "BE", 6, 10);
+        PTEmployee e1 = new PTEmployee("Jayesh", 30, "Belgaum", "Male", "BE", 6, 10);
         e1.calSal();
-        System.out.println("Details of Full time employee : ");
+        System.out.println("Details of part time employee : ");
         e1.show();
-        PTEmployee e2 = new PTEmployee("Rohini", 36, "Mysore", "Female", "PhD", 10, 8);
+        PTEmployee e2 = new PTEmployee("Pratik", 36, "Mysore", "Male", "PhD", 10, 8);
         e2.calSal();
-        System.out.println("Details of Full time employee : ");
+        System.out.println("Details of part time employee : ");
         e2.show();
     }
 }

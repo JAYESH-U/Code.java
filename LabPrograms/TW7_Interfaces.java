@@ -45,7 +45,7 @@ class FastestPrimeTester implements Prime {
 
     public boolean isPrime(int num) {
         int i = 2;
-        if (i == 1 || i == 2)
+        if (num == 1 || num == 2)
             return true;
         return ((Math.pow(i, num - 1) % num == 1));
     }
@@ -61,6 +61,6 @@ public class TW7_Interfaces {
         System.out.println("61 is a prime number : " + p1.isPrime(61));
         System.out.println("17 is a prime number : " + p2.isPrime(17));
         System.out.println("29 is a prime number : " + p3.isPrime(29));
-        System.out.println("7 is a prime number : " + p4.isPrime(19));
+        System.out.println("7 is a prime number : " + p4.isPrime(7));
     }
 }
