@@ -21,13 +21,13 @@ abstract class car {
     }
 }
 
-class marutiCar extends car {
-    marutiCar(String carName, String modelName, int chassiNum) {
+class MercedesBenzCar extends car {
+    MercedesBenzCar(String carName, String modelName, int chassiNum) {
         super(carName, modelName, chassiNum);
     }
 
     void startCar() {
-        System.out.println("Maruti car is satrting");
+        System.out.println("MercedesBenz car is satrting");
     }
 
     void operateSteering() {
@@ -72,7 +72,7 @@ class driver {
 public class TW6Polymorphism {
 
     public static void main(String[] args) {
-        marutiCar m = new marutiCar("Maruti", "Ciaz", 100);
+        MercedesBenzCar m = new MercedesBenzCar("MercedesBenz", "G-Wagon", 100);
         BmwCar b = new BmwCar("BMW", "X5", 300);
 
         driver obj1 = new driver("Jayesh", "male", 19);
