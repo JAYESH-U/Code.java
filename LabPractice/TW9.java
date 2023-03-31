@@ -4,8 +4,7 @@ import java.util.LinkedList;
 
 public class TW9 {
     public static void main(String[] args) {
-        LinkedList<String> ll = new LinkedList<>();
-
+        LinkedList<String> ll = new LinkedList<String>();
         ll.add("A");
         ll.add("B");
         ll.add("C");
@@ -14,18 +13,20 @@ public class TW9 {
         ll.add("F");
         ll.add("G");
         ll.add("H");
-        System.out.println("LL : " + ll);
+        ll.add("I");
+        ll.add("J");
 
-        ll.removeLast();
+        System.out.println("List : "+ll);
+
+        ll.remove();
         ll.removeFirst();
-        System.out.println("LL after removing first and last element: " + ll);
+        ll.removeLast();
 
-        ll.remove("B");
-        ll.remove(1);
-        System.out.println("LL after deleting 'B' and index 2 : " + ll);
+        System.out.println("List : "+ll);
 
-        String val = ll.get(1);
-        ll.set(1, val + " Hello");
-        System.out.println("LL after modifications : " + ll);
+        String val = ll.get(2);
+        ll.set(2,val+" Hello.");
+
+        System.out.println("List : "+ll);
     }
 }

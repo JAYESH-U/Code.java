@@ -34,7 +34,7 @@ public class TW1 {
             System.out.println("\tAverage of best two : "+avg[i]);
             System.out.println();
         }
-
+        sc.close();
     }
 
     public static float average(int m[]) {

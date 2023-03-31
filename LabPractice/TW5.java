@@ -3,56 +3,49 @@ package LabPractice;
 class Stack {
     int t, s[], size;
 
-    Stack(int size){
-        s= new int[size];
-        t=-1;
-        this.size = size;
+    Stack(int n){
+        this.t = -1;
+        this.s = new int[n];
+        this.size = n;
     }
 
     Stack(int a[]){
-        s= new int[a.length];
-        t=-1;
+        this.t = -1;
+        this.s = new int[a.length];
         this.size = a.length;
         for(int ele : a)
             push(ele);
     }
 
-    Stack(Stack st){
-        s= new int[st.size];
-        t=-1;
-        this.size = st.size;
-        for(int ele : st.s)
-            push(ele, st.t);
+    Stack(Stack a){
+        this.t = -1;
+        this.s = new int [a.s.length];
+        this.size = a.s.length;
+        for(int ele : a.s)
+            push(ele);
     }
 
     void push(int x){
-        if(t <size-1)
+        if(t<size-1)
             s[++t] = x;
         else
-            System.out.println("Stack Overflow.");
-    }
-
-    void push(int x, int top){
-        if(t < top)
-            s[++t] = x;
-        else
-            System.out.println("Stack Overflow.");
+            System.out.println("\nStack overflow.");
     }
 
     int pop(){
-        if(t<0){
-            System.out.println("Stack is empty");
-            return -1;
-        }
-        else
+        if(t>0)
             return s[t--];
+        else
+            System.out.println("\nStack underflow.");
+        return -999;
     }
 
     void display(){
-        System.out.println("Stack : ");
-        for(int i=0;i<=t;i++)
-            System.out.print(s[i]+" ");
-        System.out.println("\n");
+        System.out.println("\nStack : ");
+        for(int i=0;i<=t;i++){
+            System.out.print(s[i]+ " ");
+        }
+        System.out.println("");
     }
 }
 
