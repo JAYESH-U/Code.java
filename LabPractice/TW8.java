@@ -1,7 +1,5 @@
 package LabPractice;
 
-import java.util.Scanner;
-
 class UnderAge extends Exception {
     UnderAge(String s) {
         super(s);
