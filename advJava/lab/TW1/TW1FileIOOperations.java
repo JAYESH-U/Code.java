@@ -24,7 +24,7 @@ public class TW1FileIOOperations {
 
                 InputStream input = new FileInputStream("advJava\\lab\\TW1\\input.txt");
                 OutputStream output = new FileOutputStream("advJava\\lab\\TW1\\output.txt");
-                
+
                 switch (choice) {
                     case 1:
                         printCharacters(input);
@@ -57,7 +57,7 @@ public class TW1FileIOOperations {
         System.out.println("\nFile content is: ");
         int charValue = input.read();
         while (charValue != -1) {
-            System.out.println((char)charValue);
+            System.out.println((char) charValue);
             charValue = input.read();
         }
         System.out.println();
@@ -72,9 +72,11 @@ public class TW1FileIOOperations {
     }
 
     private static void printToFile(InputStream input, OutputStream output) throws IOException {
-        byte[] array = new byte[100];
-        input.read(array);
-        output.write(array);
+        byte[] buffer = new byte[1];
+        int bytesRead;
+        while ((bytesRead = input.read(buffer)) != -1) {
+            output.write(buffer, 0, bytesRead);
+        }
         System.out.println("Contents printed to another file successfully.");
     }
 }
