@@ -87,7 +87,7 @@ public class TW3 {
         Arrays array = new Arrays(10, 10);
 
         while (true) {
-            System.out.println(
+            System.out.print(
                     "1.Add int\n2.Add float\n3.Remove int\n4.Remove float\n5.Linear int Search\n6.Linear float Search\n7.Print int\n8.Print float\n9.exit.\nYour choice? : ");
             int c = sc.nextInt();
             switch (c) {
@@ -111,7 +111,7 @@ public class TW3 {
 
                 case 4:
                     System.out.print("Enter element to remove element from list =>");
-                    int rf = sc.nextInt();
+                    float rf = sc.nextFloat();
                     array.removeElements(rf);
                     break;
 
@@ -123,7 +123,7 @@ public class TW3 {
 
                 case 6:
                     System.out.print("Enter element to search element from list =>");
-                    float lsf = sc.nextInt();
+                    float lsf = sc.nextFloat();
                     System.out.println("Index of element " + lsf + " : " + array.LinearSearch(lsf));
                     break;
 
