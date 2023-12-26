@@ -6,11 +6,11 @@ public class CRC {
         int i, j, flag = 0;
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Enter the message polynomial bit pattern:");
+        System.out.print("Enter the message polynomial bit pattern : ");
         String msg = scanner.nextLine();
         int msgLen = msg.length();
 
-        System.out.println("Enter the generator polynomial bit pattern:");
+        System.out.print("Enter the generator polynomial bit pattern : ");
         String gen = scanner.nextLine();
         int genDegree = gen.length() - 1;
 
@@ -26,7 +26,7 @@ public class CRC {
         }
         a[genDegree + msgLen] = '\0';
 
-        System.out.print("The message polynomial when appended with zeros is: ");
+        System.out.print("The message polynomial when appended with zeros is : ");
         System.out.println(a);
 
         // Perform modulo operation
@@ -47,19 +47,19 @@ public class CRC {
             rem[i] = a[i + msgLen];
         }
         rem[genDegree] = '\0';
-        System.out.print("\nThe checksum calculated is:\n ");
+        System.out.print("\nThe checksum calculated is : ");
         System.out.println(rem);
 
         for (i = 0; i < msgLen; i++) {
             a[i] = msg.charAt(i);
         }
 
-        System.out.print("\nThe polynomial with checksum is: ");
+        System.out.print("\nThe polynomial with checksum is : ");
         System.out.println(a);
 
         // receiver side
 
-        System.out.println("Enter the received polynomial bit pattern:");
+        System.out.print("Enter the received polynomial bit pattern : ");
         msg = scanner.nextLine();
         msgLen = msg.length();
 
@@ -74,7 +74,7 @@ public class CRC {
             b[i + msgLen] = rem[i];
         }
         b[genDegree + msgLen] = '\0';
-        System.out.println("Message appended with CRC");
+        System.out.print("Message appended with CRC : ");
         System.out.println(b);
 
         for (i = 0; i < msgLen; i++) {
@@ -94,7 +94,7 @@ public class CRC {
             remrev[i] = b[i + msgLen];
         }
         remrev[genDegree] = '\0';
-        System.out.print("\nThe checksum calculated is:\n ");
+        System.out.print("\nThe checksum calculated is : ");
         System.out.println(remrev);
 
         for (i = 0; i < genDegree; i++) {
@@ -102,9 +102,9 @@ public class CRC {
                 flag = 1;
         }
         if (flag == 1)
-            System.out.print("\nReceived message is erroneous ");
+            System.out.println("\nReceived message is erroneous !!! ");
         else
-            System.out.print("\nReceived message is not erroneous ");
+            System.out.println("\nReceived message is not erroneous.. ");
 
     }
 
