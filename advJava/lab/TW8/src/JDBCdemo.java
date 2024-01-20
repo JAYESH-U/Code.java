@@ -6,11 +6,11 @@ import java.sql.Statement;
 
 public class JDBCdemo {
 
-    static final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver";
-    static final String DB_URL = "jdbc:mysql://localhost:3306/";
+    static final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver"; // MySQL JDBC driver
+    static final String DB_URL = "jdbc:mysql://localhost:3306/"; // 3306 is the default port for MySQL
     static final String DB_NAME = "company";
-    static final String USER = "root";
-    static final String PASS = "";
+    static final String USER = "root";  // Username and password
+    static final String PASS = "";    // You should change these to your own
     static final String CREATE_DB_SQL = "CREATE DATABASE IF NOT EXISTS company";
 
     public static void main(String[] args) {
