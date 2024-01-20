@@ -104,6 +104,16 @@ class DescThread extends Thread {
 
 public class ArraySorting {
     public static void main(String[] args) {
+        //this will jumble up the output -------->
+        // AscThread at = new AscThread();
+        // DescThread dt = new DescThread();
+
+        // at.start();
+        // dt.start();
+
+        // ------------------------------------------------ //
+
+        //this won't jumble the output --------->
         AscThread at = new AscThread();
         at.start();
 
