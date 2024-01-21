@@ -33,7 +33,7 @@ public class CongestionControl {
             }
 
             if (rem < rate)
-                System.out.println("bytes txmitted : " + rem + "\n");
+                System.out.println("bytes still to be txmitted : " + rem + "\n");
             else
                 System.out.println("bytes txmitted : " + rate + "\n");
 
@@ -42,7 +42,7 @@ public class CongestionControl {
             if (rem <= 0)
                 rem = 0;
             else
-                System.out.println("bytes txmitted : " + rem + "\n");
+                System.out.println("bytes still to be txmitted : " + rem + "\n");
 
             c++;
         }
@@ -52,14 +52,14 @@ public class CongestionControl {
             c++;
 
             if (rem < rate) {
-                System.out.println("bytes txmitted : " + rem + "\n");
+                System.out.println("bytes still to be txmitted : " + rem + "\n");
                 rem = 0;
             }
 
             if (rem >= rate) {
                 System.out.println("bytes txmitted : " + rate + "\n");
                 rem -= rate;
-                System.out.println("bytes txmitted : " + rem + "\n");
+                System.out.println("bytes still to be txmitted : " + rem + "\n");
             }
         }
 

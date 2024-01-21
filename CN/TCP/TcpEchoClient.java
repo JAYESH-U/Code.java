@@ -12,10 +12,12 @@ public class TcpEchoClient {
 
         Scanner sc = new Scanner(System.in);
 
-        try (Socket clientSocket = new Socket(HOSTNAME, PORT);
-                InputStreamReader isr = new InputStreamReader(clientSocket.getInputStream());
-                BufferedReader in = new BufferedReader(isr);
-                PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);) {
+        try (
+            Socket clientSocket = new Socket(HOSTNAME, PORT);
+            InputStreamReader isr = new InputStreamReader(clientSocket.getInputStream());
+            BufferedReader in = new BufferedReader(isr);
+            PrintWriter out = new PrintWriter(clientSocket.getOutputStream(), true);
+        ) {
             System.out.println("Connected to " + HOSTNAME + " on port " + PORT);
 
             // String data = "Hello\nJayesh\nBye";

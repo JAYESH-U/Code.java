@@ -13,10 +13,11 @@ public class TcpEchoServer {
         System.out.println("Listening on port " + PORT);
 
         while (true) {
-            try (Socket socket = serverSocket.accept();
-                 InputStreamReader isr = new InputStreamReader(socket.getInputStream());
-                 BufferedReader in = new BufferedReader(isr);
-                 PrintWriter out = new PrintWriter(socket.getOutputStream(), true)
+            try (
+                Socket socket = serverSocket.accept();
+                InputStreamReader isr = new InputStreamReader(socket.getInputStream());
+                BufferedReader in = new BufferedReader(isr);
+                PrintWriter out = new PrintWriter(socket.getOutputStream(), true)
             ) {
                 System.out.println("Connection accepted");
 
