@@ -6,7 +6,7 @@ public class InventoryManagement {
     static final String DB_URL = "jdbc:mysql://localhost:3306/";
     static final String DB_NAME = "inventory";
     static final String USER = "root";
-    static final String PASS = "jayesh2003";
+    static final String PASS = "";
     static final String CREATE_DB_SQL = "CREATE DATABASE IF NOT EXISTS inventory";
     static final String CREATE_TABLE_SQL =
             "CREATE TABLE IF NOT EXISTS products (" +
