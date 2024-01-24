@@ -33,7 +33,7 @@ public class JDBCdemo {
             stmt.executeUpdate("USE company");
 
             // Create tables and insert sample data
-            // createTables(conn); //----------------------------- Uncomment this line to create tables and insert sample data
+            createTables(conn); //----------------------------- Uncomment this line to create tables and insert sample data
 
             // Execute SQL queries
             executeQueries(conn);

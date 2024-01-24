@@ -11,7 +11,7 @@ import java.util.HashSet;
 
 public class ByteArrayInputOutputStream {
     public static void main(String[] args) {
-        HashSet<Integer> set = new HashSet<Integer>(Arrays.asList(65, 69, 79, 73, 85, 97, 101, 105, 111, 117));
+        HashSet<Character> set = new HashSet<Character>(Arrays.asList('a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U'));
 
         try {
             InputStream f1 = new FileInputStream("advJava\\lab\\TW4\\BAIS.txt");
@@ -31,9 +31,9 @@ public class ByteArrayInputOutputStream {
 
             int k;
             while ((k = by.read()) != -1) {
-                if (set.contains(k)) {
+                if (set.contains((char)k)) {
                     byv.write(k);
-                } else if ((k >= 65 && k < 91) || (k >= 97 && k < 122)) {
+                } else if (((k >= (int)'a') && k < (int)'z') || (k >= (int)'A' && k < (int)'Z')) {
                     byc.write(k);
                 }
             }

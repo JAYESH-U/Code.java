@@ -1,56 +1,9 @@
 package advJava.lab.TW5;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-import java.nio.file.Files;
-import java.nio.file.Paths;
-import java.util.stream.Stream;
-
-// public class TW5 {
-
-//     public static void main(String[] args) {
-//         String inputFilePath = "advJava\\lab\\TW5\\input.txt";
-//         String outputFilePath = "advJava\\lab\\TW5\\output.txt";
-
-//         try {
-//             // Read the text document using Java streams
-//             long lineCount = Files.lines(Paths.get(inputFilePath)).count();
-//             long wordCount = Files.lines(Paths.get(inputFilePath))
-//                     .flatMap(line -> Stream.of(line.split("\\s+")))
-//                     .filter(word -> !word.isEmpty())
-//                     .count();
-
-//             // Display the results
-//             System.out.println("Total Lines: " + lineCount);
-//             System.out.println("Total Words: " + wordCount);
-
-//             // Export the analysis results to a new file
-//             exportResults(outputFilePath, lineCount, wordCount);
-//         } catch (IOException e) {
-//             e.printStackTrace();
-//         }
-//     }
-
-//     private static void exportResults(String outputFilePath, long lineCount, long wordCount) {
-//         try (BufferedWriter writer = new BufferedWriter(new FileWriter(outputFilePath))) {
-//             writer.write("Total Lines: " + lineCount + "\n");
-//             writer.write("Total Words: " + wordCount + "\n");
-//             System.out.println("Analysis results exported to: " + outputFilePath);
-//         } catch (IOException e) {
-//             e.printStackTrace();
-//         }
-//     }
-// }
 
 public class TW5 {
     public static void main(String[] args) throws IOException {

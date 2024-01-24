@@ -2,12 +2,12 @@ package advJava.lab.TW7;
 
 class BankAcct {
     String cust_name;
-    int cust_accno;
-    static float balance;
+    static int cust_accno;
+    float balance;
 
     BankAcct(String cust_name, int cust_accno, float balance) {
         this.cust_name = cust_name;
-        this.cust_accno = cust_accno;
+        BankAcct.cust_accno = cust_accno;
         this.balance = balance;
     }
 
@@ -52,7 +52,7 @@ class BankAcct {
     synchronized float check_balance() {
         return (balance);
     }
-}// end of BankAccount class
+}
 
 class Deposit_thread extends Thread {
     Thread t;
@@ -71,7 +71,7 @@ class Deposit_thread extends Thread {
         BA.deposit(name, damt);
         System.out.println("Updated balance is : " + BA.check_balance());
     }
-} // end of Deposit_thread class
+}
 
 class Withdraw_thread extends Thread {
     // Thread t;
@@ -90,7 +90,7 @@ class Withdraw_thread extends Thread {
     public void run() {
         BA.withdraw(name, wamt);
     }
-} // end of Deposit_thread class
+}
 
 public class BankAccount {
     public static void main(String args[]) {
@@ -110,5 +110,5 @@ public class BankAccount {
         WT2.start();
         WT3.start();
 
-    } // end of main
-}// end of class
+    }
+}

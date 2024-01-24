@@ -24,7 +24,7 @@ public class TW2CombineFilesAndDisplayProperties {
             OutputStream output = new FileOutputStream(outputFile);
 
             // Copy content from file1 to the output file
-            byte[] buffer = new byte[1024];
+            byte[] buffer = new byte[1];
             int bytesRead;
             while ((bytesRead = input1.read(buffer)) != -1) {
                 output.write(buffer, 0, bytesRead);
