@@ -29,7 +29,7 @@ public class CreateDB {
             while (true) {
                 System.out.println();
                 System.out.print(
-                        "1.Add Employee\n2.Add Department\n3.Display employees\n4.Display Departments\n5.Display Employee and their Eepartments\n6.Exit\nEnter Choice : ");
+                        "1.Add Employee\n2.Add Department\n3.Display employees\n4.Display Departments\n5.Display Employee and their Eepartments\n6.Delete employee.\n7.Delete Department.\n8.Exit\nEnter Choice : ");
                 int ch = sc.nextInt();
 
                 if (ch == 1) {
@@ -43,6 +43,10 @@ public class CreateDB {
                 } else if (ch == 5) {
                     displayEmpDept(stmt);
                 } else if (ch == 6) {
+                    deleteEmployee(stmt, sc);
+                } else if (ch == 7) {
+                    deleteDepartment(stmt, sc);
+                } else if (ch == 8) {
                     break;
                 }
             }
@@ -79,7 +83,7 @@ public class CreateDB {
                 + "fname TEXT, "
                 + "lname TEXT, "
                 + "dept INTEGER,"
-                + "FOREIGN KEY (dept) REFERENCES department(deptId) )";
+                + "FOREIGN KEY (dept) REFERENCES department(deptId) ON DELETE CASCADE)";
 
         stmt.executeUpdate(employeeTable);
     }
@@ -147,7 +151,7 @@ public class CreateDB {
         System.out.println();
     }
 
-    public static void displayEmpDept(Statement stmt) throws SQLException{
+    public static void displayEmpDept(Statement stmt) throws SQLException {
         String query = "SELECT E.fname, E.lname, D.dname, D.budget " +
                 "FROM employees E " +
                 "JOIN department D ON E.dept = D.deptId";
@@ -162,6 +166,22 @@ public class CreateDB {
             System.out.print(resultSet.getFloat("budget") + "\n");
         }
         System.out.println();
+    }
+
+    public static void deleteEmployee(Statement stmt, Scanner sc) throws SQLException {
+        System.out.print("\nEnter Employee ssn : ");
+        int id = sc.nextInt();
+        String deleteEmployeeQuery = "DELETE FROM employees WHERE ssn = " + id;
+        stmt.executeUpdate(deleteEmployeeQuery);
+        System.out.println("Employee with ID " + id + " deleted.");
+    }
+
+    public static void deleteDepartment(Statement stmt, Scanner sc) throws SQLException {
+        System.out.print("\nEnter Department Id : ");
+        int id = sc.nextInt();
+        String deleteDepartmentQuery = "DELETE FROM department WHERE deptId = " + id;
+        stmt.executeUpdate(deleteDepartmentQuery);
+        System.out.println("Department with ID " + id + " deleted.");
     }
 
 }
