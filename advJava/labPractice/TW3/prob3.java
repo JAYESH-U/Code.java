@@ -1,8 +1,9 @@
 /*
-Write a Java Program to demonstrate the implementation of reading and writing binary data
-in Java. 1) Read the source and destination file names. 2) Read user defined text to be
-written to the source file. 3) Write every alternate byte from the source to the destination
-file. 4) Compare the properties of the file.
+Write a Java Program to demonstrate the implementation of reading and writing binary data in Java. 
+1) Read the source and destination file names. 
+2) Read user defined text to be written to the source file. 
+3) Write every alternate byte from the source to the destination file. 
+4) Compare the properties of the file.
 */
 
 import java.io.*;
@@ -21,7 +22,7 @@ public class prob3 {
 
             // writing in the source file
             try (FileOutputStream fout = new FileOutputStream(filesrc)) {
-                
+
                 System.out.println("Enter the text to be written to the file with . on single line to end.");
                 String val = bin.readLine();
 
@@ -44,7 +45,7 @@ public class prob3 {
                 int val = fin.read();
 
                 while (val != -1) {
-                    
+
                     if (i % 2 != 0)
                         fout.write(val);
 

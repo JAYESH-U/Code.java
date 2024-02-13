@@ -22,7 +22,7 @@ public class javaStreams {
     public static void main(String[] args) throws IOException {
         Map<String, Integer> wordFreq = new HashMap<>();
 
-        try (InputStream file = new FileInputStream("advJava/labPractice/TW1/text.txt")) {
+        try (InputStream file = new FileInputStream("advJava\\labPractice\\TW1\\text.txt")) {
             StringBuilder word = new StringBuilder();
             int c;
 
@@ -50,14 +50,14 @@ public class javaStreams {
             }
         }
 
-        System.out.println("Word frequencies:");
-        System.out.println(wordFreq);
+        System.out.println("Top frequent words:");
+        findNFrequentWord(wordFreq);
 
-        String mostFrequentWord = findMostFrequentWord(wordFreq);
-        System.out.println("Most frequent word: " + mostFrequentWord);
+        // System.out.println("Word frequencies:");
+        // System.out.println(wordFreq);
 
-        System.out.println("Top 3 frequent words:");
-        findNFrequentWord(wordFreq); 
+        // String mostFrequentWord = findMostFrequentWord(wordFreq);
+        // System.out.println("Most frequent word: " + mostFrequentWord);
     }
 
     private static void findNFrequentWord(Map<String, Integer> wordFreq) {
