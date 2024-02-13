@@ -1,3 +1,5 @@
+package advJava.labPractice.TW7and8.src;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -11,7 +13,7 @@ public class BookManagement {
     static final String DB_URL = "jdbc:mysql://localhost:3306/"; // 3306 is the default port for MySQL
     static final String DB_NAME = "company";
     static final String USER = "root"; // Username and password
-    static final String PASS = "jayesh2003"; // You should change these to your own
+    static final String PASS = ""; // You should change these to your own
     static final String CREATE_DB_SQL = "CREATE DATABASE IF NOT EXISTS library";
 
     public static void main(String[] args) throws Exception {
