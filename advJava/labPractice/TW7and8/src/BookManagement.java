@@ -11,7 +11,6 @@ public class BookManagement {
 
     static final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver"; // MySQL JDBC driver
     static final String DB_URL = "jdbc:mysql://localhost:3306/"; // 3306 is the default port for MySQL
-    static final String DB_NAME = "company";
     static final String USER = "root"; // Username and password
     static final String PASS = ""; // You should change these to your own
     static final String CREATE_DB_SQL = "CREATE DATABASE IF NOT EXISTS library";
@@ -103,10 +102,10 @@ public class BookManagement {
         System.out.print("Author : ");
         String author = sc.next();
 
-        String insertEmp = "INSERT INTO books (name, author) VALUES "
+        String insertBook = "INSERT INTO books (name, author) VALUES "
                 + "('" + name + "', '" + author + "')";
 
-        stmt.executeUpdate(insertEmp);
+        stmt.executeUpdate(insertBook);
     }
 
     public static void findBooksByAuthors(Statement stmt) throws SQLException {
