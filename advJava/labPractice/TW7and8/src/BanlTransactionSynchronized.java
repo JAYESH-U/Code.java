@@ -178,7 +178,7 @@ class Deposit_thread extends Thread {
     float damt;
     Scanner sc;
 
-    Deposit_thread(Bank BA, int id, int damt) {
+    Deposit_thread(Bank BA, int id, float damt) {
         this.BA = BA;
         this.id = id;
         this.damt = damt;
@@ -199,7 +199,7 @@ class Withdraw_thread extends Thread {
     float wamt;
     Scanner sc;
 
-    Withdraw_thread(Bank BA, int id, String pass, int wamt) {
+    Withdraw_thread(Bank BA, int id, String pass, float wamt) {
         this.BA = BA;
         this.id = id;
         this.pass = pass;
@@ -218,42 +218,58 @@ public class BanlTransactionSynchronized {
         Scanner sc = new Scanner(System.in);
         Bank b = new Bank();
 
-        // while (true) {
-        // System.out.println();
-        // System.out.println("1.Print all Accounts");
-        // System.out.println("2.Print specific account details");
-        // System.out.println("3.Deposit");
-        // System.out.println("4.Withdraw");
-        // System.out.println("5.Add Account");
-        // System.out.println("6.Exit");
-        // int ch = sc.nextInt();
+        while (true) {
+            System.out.println();
+            System.out.println("1.Print all Accounts");
+            System.out.println("2.Print specific account details");
+            System.out.println("3.Deposit");
+            System.out.println("4.Withdraw");
+            System.out.println("5.Add Account");
+            System.out.println("6.Exit");
+            int ch = sc.nextInt();
 
-        // try {
-        // if (ch == 1) {
-        // b.printAllAccounts();
-        // } else if (ch == 2) {
-        // b.printDetails(sc);
-        // } else if (ch == 3) {
-        // b.deposit(sc);
-        // } else if (ch == 4) {
-        // b.withdraw(sc);
-        // } else if (ch == 5) {
-        // b.addAccount(sc);
-        // } else if (ch == 6) {
-        // break;
-        // } else {
-        // System.out.println("Invalid choice.!!!");
-        // }
-        // } catch (Exception e) {
-        // e.printStackTrace();
-        // }
-        // }
+            try {
+                if (ch == 1) {
+                    b.printAllAccounts();
+                } else if (ch == 2) {
+                    b.printDetails(sc);
+                } else if (ch == 3) {
+                    // b.deposit(sc);
+                    deposit(b, sc);
+                } else if (ch == 4) {
+                    // b.withdraw(sc);
+                    withdraw(b, sc);
+                } else if (ch == 5) {
+                    b.addAccount(sc);
+                } else if (ch == 6) {
+                    sc.close();
+                    break;
+                } else {
+                    System.out.println("Invalid choice.!!!");
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
 
-        Deposit_thread dt = new Deposit_thread(b, 1, 100);
-        Withdraw_thread wt = new Withdraw_thread(b, 1, "jay", 10);
-
+    public static void deposit(Bank b, Scanner sc) {
+        System.out.print("id : ");
+        int id = sc.nextInt();
+        System.out.print("amount : ");
+        float amount = sc.nextFloat();
+        Deposit_thread dt = new Deposit_thread(b, id, amount);
         dt.start();
-        wt.start();
+    }
 
+    public static void withdraw(Bank b, Scanner sc) {
+        System.out.print("id : ");
+        int id = sc.nextInt();
+        System.out.print("password : ");
+        String pass = sc.next();
+        System.out.print("amount : ");
+        float amount = sc.nextFloat();
+        Withdraw_thread wt = new Withdraw_thread(b, id, pass, amount);
+        wt.start();
     }
 }
