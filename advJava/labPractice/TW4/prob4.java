@@ -63,7 +63,7 @@ class Credientials {
     }
 
     void getpairs() {
-        Set<String> keys = data.keySet();
+        // Set<String> keys = data.keySet();
 
         // for (String key : keys) {
         //     System.out.print("(" + key + " : " + data.get(key) + "), ");

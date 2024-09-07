@@ -63,6 +63,7 @@ public class BankingClient {
                 }
 
             } while (choice != 4);
+            scanner.close();
 
         } catch (Exception e) {
             e.printStackTrace();

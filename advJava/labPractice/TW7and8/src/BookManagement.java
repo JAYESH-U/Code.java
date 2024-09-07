@@ -97,10 +97,10 @@ public class BookManagement {
         System.out.println("Enter details of books : ");
 
         System.out.print("Name : ");
-        String name = sc.next();
+        String name = sc.nextLine();
 
         System.out.print("Author : ");
-        String author = sc.next();
+        String author = sc.nextLine();
 
         String insertBook = "INSERT INTO books (name, author) VALUES "
                 + "('" + name + "', '" + author + "')";

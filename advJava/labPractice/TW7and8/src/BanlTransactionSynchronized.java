@@ -7,7 +7,7 @@ class Bank {
     static final String JDBC_DRIVER = "com.mysql.cj.jdbc.Driver"; // MySQL JDBC driver
     static final String DB_URL = "jdbc:mysql://localhost:3306/"; // 3306 is the default port for MySQL
     static final String USER = "root"; // Username and password
-    static final String PASS = "jayesh2003"; // You should change these to your own
+    static final String PASS = ""; // You should change these to your own
     static final String CREATE_DB_SQL = "CREATE DATABASE IF NOT EXISTS bank";
     private Connection conn = null;
     private Statement stmt = null;
